@@ -1,0 +1,63 @@
+composer create-project --prefer-dist laravel/laravel project-name
+cd project-name
+Start the Laravel development server
+php artisan serve
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+Route::get('/', function () {
+    return view('welcome');
+});
+Create your view files using Blade templating engine. For example, you can create a welcome.blade.php file:
+php
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome to my Laravel project!</h1>
+</body>
+</html>
+Create a migration file for your database table by running the following command:
+go
+php artisan make:migration create_students_table --create=students
+Schema::create('students', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->integer('age');
+    $table->timestamps();
+});
+Run the migration to create the table in the database:
+
+php artisan migrate
+Create a model for your students table by running the following command:
+go
+
+php artisan make:model Student
+public function index()
+{
+    $students = Student::all();
+    return view('students.index', compact('students'));
+}
+Create a new directory called students in the resources/views directory.
+Create a index.blade.php file inside the students directory.
+Open the index.blade.php file and display the students' data. For example:
+php
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <ul>
+        @foreach ($students as $student
+
+
+
