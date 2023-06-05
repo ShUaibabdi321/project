@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My School Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+.box {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to My School Project</h1>
+<p>This is a simple web page created for my school project.</p>
+<div class="box">
+    <h2>JavaScript Code Example</h2>
+    <p>This code adds two numbers
+        <pre><code class="language-javascript">
+            function addNumbers(a, b) {
+              return a + b;
+            }
+      
+            var num1 = 5;
+            var num2 = 10;
+            var sum = addNumbers(num1, num2);
+            console.log('The sum of ' + num1 + ' and ' + num2 + ' is: ' + sum);
+    </code></pre>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+</body>
+</html>
